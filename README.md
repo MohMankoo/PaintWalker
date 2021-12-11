@@ -1,4 +1,6 @@
 # Paint Walker
+
+## About
 When a colorful world is suddenly stripped of its colours,
 many of its residents and plantlife await death’s door.
 Follow Nox along in its journey to unravel the origin of the
@@ -7,9 +9,10 @@ isometric 3D world. Your only hope of salvation is to make clever
 use of the limited paint you obtain along the way
 to restore life into the world.
 
-Development build: [Itch.io](https://starlight17.itch.io/paint-walker)
-
 ## Credits
+### December 11, 2021 - Present
+- **Mohpreet Mankoo**
+### Prior to December 11, 2021
 - **Jackie Huang** (Developer)
 - **Mohpreet Mankoo** (Developer)
 - **Mengde (Robert) Wang** (Developer)
