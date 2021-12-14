@@ -28,7 +28,7 @@ public class ChangePerspective : MonoBehaviour
     public GameObject ExitObject;
     private Vector3 _exitPosition;
     private Vector3 _originalPosition;
-    private CutSceneManager _cutSceneManager;
+    private CutsceneManager _cutsceneManager;
     private bool _hasPannedToExit;
     private LevelManager _levelManager;
     private RestartDontDeleteManager _restartDontDeleteManager;
@@ -49,7 +49,7 @@ public class ChangePerspective : MonoBehaviour
         _exitPosition = new Vector3(exitObjectPosition.x, position.y, exitObjectPosition.z);
         _originalPosition = position;
 
-        _cutSceneManager = FindObjectOfType<CutSceneManager>();
+        _cutsceneManager = FindObjectOfType<CutsceneManager>();
         _levelManager = FindObjectOfType<LevelManager>();
         _restartDontDeleteManager = FindObjectOfType<RestartDontDeleteManager>();
     }
@@ -85,8 +85,8 @@ public class ChangePerspective : MonoBehaviour
     void Update()
     {
         if (!_hasPannedToExit
-            && (_cutSceneManager == null // For levels with no cutscene
-                || (_cutSceneManager != null && !_cutSceneManager.isActiveAndEnabled))) // For levels with a cutscene
+            && (_cutsceneManager == null // For levels with no cutscene
+                || (_cutsceneManager != null && !_cutsceneManager.isActiveAndEnabled))) // For levels with a cutscene
         {
             _restartDontDeleteManager = FindObjectOfType<RestartDontDeleteManager>();
             if (!_restartDontDeleteManager.isRestarting)
