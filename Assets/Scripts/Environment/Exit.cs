@@ -9,7 +9,7 @@ public class Exit : MonoBehaviour
     private UpdateUI _updateUI;
     public LevelManager manager;
     public AudioSource _winAudioSource;
-    private CutSceneManager _cutSceneManager;
+    private CutsceneManager _cutsceneManager;
     private PauseMenu _pauseMenu;
     private RestartDontDeleteManager restartDontDeleteManager;
     private GameObject _player;
@@ -23,7 +23,7 @@ public class Exit : MonoBehaviour
         _updateUI = FindObjectOfType<UpdateUI>();
         restartDontDeleteManager = FindObjectOfType<RestartDontDeleteManager>();
         _winAudioSource = this.GetComponent<AudioSource>();
-        _cutSceneManager = FindObjectOfType<CutSceneManager>();
+        _cutsceneManager = FindObjectOfType<CutsceneManager>();
         _pauseMenu = FindObjectOfType<PauseMenu>();
         _player = GameObject.FindWithTag("Player");
     }
@@ -38,21 +38,18 @@ public class Exit : MonoBehaviour
             _player.SetActive(false);
             _winAudioSource.Play();
 
-            if (scene.name == "TutorialColors" || scene.name == "Tutorial1" || scene.name == "Tutorial2" || scene.name == "Tutorial15")
+            if (scene.name == "Tutorial1" || scene.name == "Tutorial2" || scene.name == "Tutorial3")
             {
                 _player.SetActive(false);
-                _updateUI.SetInfoText("Tutorial Complete!", true);
+                _updateUI.SetInfoText("Tutorial Complete", true);
             }
-            else if (scene.name == "Level3" || scene.name == "Level2" || scene.name == "Level1")
+            else if (scene.name == "Level1" || scene.name == "Level2" || scene.name == "Level3")
             {
                 _player.SetActive(false);
-                _updateUI.SetInfoText("You Win!", true);
-               
+                _updateUI.SetInfoText("Level Complete", true);
             }
             StartCoroutine(ReturnToMenu(scene));
-            
         }
-
     }
 
     private IEnumerator ReturnToMenu(Scene scene)
@@ -62,10 +59,10 @@ public class Exit : MonoBehaviour
         yield return new WaitForSeconds(1);
         if (scene.name == "Level3")
         {
-            _cutSceneManager.TriggerEndCutScene();
+            _cutsceneManager.TriggerEndCutScene();
         }
-        while (_cutSceneManager != null &&
-               _cutSceneManager.gameObject.activeSelf)
+        while (_cutsceneManager != null &&
+               _cutsceneManager.gameObject.activeSelf)
         {
             yield return null;
         }

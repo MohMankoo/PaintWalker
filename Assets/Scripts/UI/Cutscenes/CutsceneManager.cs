@@ -4,13 +4,13 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using DefaultNamespace;
 
-public class CutSceneManager : MonoBehaviour
+public class CutsceneManager : MonoBehaviour
 {
     private List<GameObject> _cutSceneStorage;
     private List<GameObject> _endSceneStorage;
     private List<GameObject> _currScenes;
     private LevelManager _levelManager;
-    private CutSceneDontDeleteManager _cutSceneDontDestroyManager;
+    private CutsceneDontDeleteManager _cutsceneDontDestroyManager;
     private ControllerUtil _controllerUtil;
     private bool endSceneActive;
     private PauseMenu _pauseMenu;
@@ -23,7 +23,7 @@ public class CutSceneManager : MonoBehaviour
     {
         instance = gameObject;
         _levelManager = FindObjectOfType<LevelManager>();
-        _cutSceneDontDestroyManager = FindObjectOfType<CutSceneDontDeleteManager>();
+        _cutsceneDontDestroyManager = FindObjectOfType<CutsceneDontDeleteManager>();
         _controllerUtil = FindObjectOfType<ControllerUtil>();
         _cutSceneStorage = new List<GameObject>();
         _endSceneStorage = new List<GameObject>();
@@ -44,7 +44,7 @@ public class CutSceneManager : MonoBehaviour
                     transform.GetChild(i).gameObject.SetActive(false);
                 }
             }
-            _cutSceneDontDestroyManager.cutScenesSeen = true;
+            _cutsceneDontDestroyManager.cutScenesSeen = true;
         }
     }
 

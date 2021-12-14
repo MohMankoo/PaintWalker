@@ -5,13 +5,13 @@ using UnityEngine;
 public class TutorialTrigger : MonoBehaviour
 {
     private TutorialPromptsManager tutorialPrompts;
-    private CutSceneManager cutsceneManager;
+    private CutsceneManager cutsceneManager;
     public Tutorial tutorial;
 
     void Start()
     {
         tutorialPrompts = FindObjectOfType<TutorialPromptsManager>();
-        cutsceneManager = FindObjectOfType<CutSceneManager>();
+        cutsceneManager = FindObjectOfType<CutsceneManager>();
     }
 
     void OnTriggerEnter(Collider other)

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CutSceneDontDeleteManager : MonoBehaviour
+public class CutsceneDontDeleteManager : MonoBehaviour
 {
     private static GameObject instance;
     public bool cutScenesSeen;

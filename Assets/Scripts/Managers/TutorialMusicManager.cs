@@ -13,6 +13,7 @@ public class TutorialMusicManager : MonoBehaviour
     {
         var currentScene = SceneManager.GetActiveScene();
         var currentSceneName = currentScene.name;
+        
         if (currentSceneName == "Tutorial1")
         {
             DontDestroyOnLoad(gameObject);
@@ -21,7 +22,7 @@ public class TutorialMusicManager : MonoBehaviour
         {
             DontDestroyOnLoad(gameObject);
         }
-        if (currentSceneName == "Tutorial15")
+        if (currentSceneName == "Tutorial3")
         {
             DontDestroyOnLoad(gameObject);
         }
@@ -31,13 +32,10 @@ public class TutorialMusicManager : MonoBehaviour
         {
             instance = gameObject;
         }
-       
         else
         {
             Destroy(gameObject);
         }
-        // backgroundMusic = GetComponent<AudioSource>();
-        // backgroundMusic.Play();
     }
 
     // Update is called once per frame
