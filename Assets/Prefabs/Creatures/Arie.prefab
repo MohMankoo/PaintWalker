@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 660358206807919855}
   - component: {fileID: 660358206807919854}
   m_Layer: 0
-  m_Name: Ramming Creature 1
+  m_Name: Arie
   m_TagString: RammingCreature
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
