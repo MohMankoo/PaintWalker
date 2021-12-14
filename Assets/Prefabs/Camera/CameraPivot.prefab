@@ -60,7 +60,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3517091834837948321}
   m_Layer: 0
-  m_Name: WorldPivot
+  m_Name: CameraPivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

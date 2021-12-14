@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6975580772132104596}
   - component: {fileID: 6975580772132104595}
   m_Layer: 0
-  m_Name: Ulala
+  m_Name: Sign
   m_TagString: HowlingCreature
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
