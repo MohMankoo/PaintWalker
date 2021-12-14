@@ -22,5 +22,6 @@ to restore life into the world.
 - **Stephen Spencer** (3D Art & Animation)
 - **Long Kha (Stark)** (3D Art)
 - **Jisu Kim** (3D Art)
+- **Zachary J.K.** (Model Rigging)
 - **Hayden McGowan** (Music and Audio Implementation)
 - **Briana Lee** (Music)
