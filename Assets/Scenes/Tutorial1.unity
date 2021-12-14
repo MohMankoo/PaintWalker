@@ -5212,6 +5212,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1751545508}
     m_Modifications:
+    - target: {fileID: 7312810920577074250, guid: e295a5af8142d514d81c65933ef8c4f8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8606979560250860972, guid: e295a5af8142d514d81c65933ef8c4f8, type: 3}
       propertyPath: m_Name
       value: NonColouredBlock
