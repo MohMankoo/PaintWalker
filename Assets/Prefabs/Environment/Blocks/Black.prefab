@@ -646,7 +646,7 @@ GameObject:
   - component: {fileID: 4352279673067698919}
   - component: {fileID: 4984614076829177795}
   m_Layer: 0
-  m_Name: BlackBlock
+  m_Name: Black
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

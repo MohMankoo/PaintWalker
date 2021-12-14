@@ -4817,7 +4817,7 @@ GameObject:
   - component: {fileID: 3748543724197547219}
   - component: {fileID: 8579858294870208396}
   m_Layer: 6
-  m_Name: PaintBall
+  m_Name: PaintOrb
   m_TagString: PaintRefill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
