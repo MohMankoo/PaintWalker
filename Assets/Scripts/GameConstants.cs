@@ -4,6 +4,18 @@ using UnityEngine;
 
 public class GameConstants : MonoBehaviour
 {
+    /* The Levels enum denotes the various levels available to the Player.
+     * Levels should be named after their respective Scene names.
+     */
+    public enum Levels {
+        Level1,
+        Level2,
+        Level3,
+        Tutorial1,
+        Tutorial2,
+        Tutorial3
+    }
+    
     /*
      * Types of Paints Nox can carry
      */
@@ -36,8 +48,6 @@ public class GameConstants : MonoBehaviour
     public const float UNINTERACTABLE_SELECTION_R = 1f;
     public const float UNINTERACTABLE_SELECTION_G = 0.2f;
     public const float UNINTERACTABLE_SELECTION_B = 0f;
-    // public static readonly Color32 SELECTION_HIGHLIGHT_COLOUR = new Color(0.459f, 0.679f, 0.663f, 1.000);
-    // public static readonly Color32 SELECTION_HIGHLIGHT_COLOUR = new Color(0.549f, 0.824f, 0.804f, 1.000);
 
     /*
      * Note this is for the switch paint UI but they're not pointing in the right direction.
@@ -47,21 +57,6 @@ public class GameConstants : MonoBehaviour
     public const string NortheastQuadrant = "NE";
     public const string SouthwestQuadrant = "SW";
     public const string SoutheastQuadrant = "SE";
-
-    /* The Levels enum denotes the various levels available to the Player.
-     * Levels should be named after their respective Scene names.
-     */
-    public enum Levels {
-        AlphaScenev2,
-        TutorialColors,
-
-        Level1,
-        Level2,
-        Level3,
-        Tutorial2,
-        Tutorial15,
-        Tutorial1
-    }
 
     /*
      * Used to determine which way to invert Player movement

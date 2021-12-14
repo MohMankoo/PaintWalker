@@ -9,7 +9,7 @@ public class SceneLoader : MonoBehaviour
 {
     public static void LoadMainMenu()
     {
-        SceneManager.LoadScene("MainMenuScene");
+        SceneManager.LoadScene("MainMenu");
     }
 
     public static void LoadNextLevel()
@@ -17,11 +17,11 @@ public class SceneLoader : MonoBehaviour
         Scene scene = SceneManager.GetActiveScene();
         if (scene.name == "Tutorial1")
         {
-            LoadLevel(Levels.Tutorial15);
-        } else if (scene.name == "Tutorial15")
-        {
             LoadLevel(Levels.Tutorial2);
         } else if (scene.name == "Tutorial2")
+        {
+            LoadLevel(Levels.Tutorial3);
+        } else if (scene.name == "Tutorial3")
         {
             LoadLevel(Levels.Level1);
         }  else if (scene.name == "Level1")
