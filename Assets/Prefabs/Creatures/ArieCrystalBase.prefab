@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5706034119291278846}
   - component: {fileID: 7551147365219787060}
   m_Layer: 0
-  m_Name: crystal_base
+  m_Name: ArieCrystalBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
