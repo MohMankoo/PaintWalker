@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5795091490525800093}
   m_Layer: 0
-  m_Name: TpCreatures
+  m_Name: GemiTwins
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

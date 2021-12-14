@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8998693518866426739}
   - component: {fileID: 3076102948413610276}
   m_Layer: 0
-  m_Name: Tp Creature
+  m_Name: Gemi
   m_TagString: TpCreature
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
