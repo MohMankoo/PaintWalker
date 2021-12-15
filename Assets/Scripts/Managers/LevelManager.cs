@@ -41,7 +41,7 @@ public class LevelManager : MonoBehaviour
 
     // Restart/Load checkpoint capabilities
     public static Dictionary<string, dynamic> checkpointInfo;
-    public static List<Vector3> pastCheckPoints;
+    public static List<Vector3> pastCheckpoints;
     private RestartDontDeleteManager _restartDontDestroyManager;
 
     // Redo capabilities
@@ -50,7 +50,7 @@ public class LevelManager : MonoBehaviour
 
     private void Awake()
     {
-        LevelManager.pastCheckPoints = new List<Vector3>();
+        LevelManager.pastCheckpoints = new List<Vector3>();
         checkpointInfo = new Dictionary<string, dynamic>();
         checkpointInfo["checkpointPos"] = Vector3.zero;
 

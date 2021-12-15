@@ -27,7 +27,7 @@ public class Checkpoint : MonoBehaviour
                 ObjectStorage.WipeStorage();
                 LevelManager.checkpointInfo["checkpointPos"] = this.transform.position;
                 LevelManager.checkpointInfo["playerPos"] = hitInfo.transform.position;
-                LevelManager.pastCheckPoints.Add(this.transform.position);
+                LevelManager.pastCheckpoints.Add(this.transform.position);
                 LevelManager.checkpointInfo["playerRotation"] = hitInfo.transform.rotation;
                 LevelManager.checkpointInfo["cameraAttributes"] = cameraPanningRevertTarget;
                 FindObjectOfType<LevelManager>().AddPaintInfoToStorage();
@@ -43,21 +43,4 @@ public class Checkpoint : MonoBehaviour
         }
 
     }
-
-    //private void OnCollisionEnter(Collision other)
-    //{
-    //    print("this");
-    //    if (other.gameObject.CompareTag("Player"))
-    //    {
-    //        if (LevelManager.checkpointPos == Vector3.zero)
-    //        {
-    //            LevelManager.checkpointPos = this.transform.position;
-    //            LevelManager.pastCheckPoints.Add(this.transform.position);
-    //        } else if (!LevelManager.pastCheckPoints.Contains(this.transform.position))
-    //        {
-    //            LevelManager.checkpointPos = this.transform.position;
-    //            LevelManager.pastCheckPoints.Add(this.transform.position);
-    //        }
-    //    }
-    //}
 }
