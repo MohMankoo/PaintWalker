@@ -911,9 +911,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 152687858}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 255424936e3fd964bbdcc86a5494959d, type: 3}
+  m_Script: {fileID: 11500000, guid: f59deaca88a83b64687f09da9c9a7c29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  music: {fileID: 368475253}
+  tutorial: {fileID: 8300000, guid: a3d255e25896aef4281da7338af8d37a, type: 3}
 --- !u!4 &152687860
 Transform:
   m_ObjectHideFlags: 0
@@ -1608,6 +1610,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6287aefaf8a77a24888fca27b709a8be, type: 3}
+--- !u!82 &368475253 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7285803934213302035, guid: 89a4836227dfe044d88d22415c8fd118, type: 3}
+  m_PrefabInstance: {fileID: 485706505}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &372472041
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4441,6 +4448,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d23edd5f07d151c47b0771a2d560b9b0, type: 3}
+--- !u!1 &934822476 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3517091836087241402, guid: d43312ba220fe6341b8a0a24af2730bd, type: 3}
+  m_PrefabInstance: {fileID: 1981038709}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &934822480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 934822476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_RenderPostProcessing: 1
+  m_Antialiasing: 2
+  m_AntialiasingQuality: 1
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!4 &946655967 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8951452788856766230, guid: e295a5af8142d514d81c65933ef8c4f8, type: 3}
@@ -10406,7 +10450,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3517091836087241407, guid: d43312ba220fe6341b8a0a24af2730bd, type: 3}
   m_PrefabInstance: {fileID: 1981038709}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 934822476}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3cc0cb634e7ca9f48b2c90bb087a6f4e, type: 3}
