@@ -46,7 +46,7 @@ ParticleSystem:
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
-  looping: 1
+  looping: 0
   prewarm: 0
   playOnAwake: 0
   useUnscaledTime: 0
@@ -5027,8 +5027,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.16140087, g: 0.8412186, b: 0.8773585, a: 1}
-  m_Intensity: 1
-  m_Range: 0.56
+  m_Intensity: 0.1
+  m_Range: 0.62
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -5069,7 +5069,7 @@ Light:
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
+  m_BounceIntensity: 0
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
@@ -5942,7 +5942,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 4
+      scalar: 5
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -9835,7 +9835,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10308, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 379069d05693df74c807db1e2b198676, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10004,12 +10004,12 @@ GameObject:
   - component: {fileID: 6422874270594287790}
   - component: {fileID: 6331822445839344899}
   m_Layer: 3
-  m_Name: TipLight
+  m_Name: PointLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6422874270594287790
 Transform:
   m_ObjectHideFlags: 0
@@ -10017,13 +10017,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7811376544098187590}
-  m_LocalRotation: {x: -0.22317643, y: 0.27531126, z: -0.37243098, w: 0.8577244}
-  m_LocalPosition: {x: -0.0012, y: 0.3085, z: -0.0017}
+  m_LocalRotation: {x: 0.1435046, y: 0.14935516, z: -0.8395505, w: -0.5022495}
+  m_LocalPosition: {x: -0.0049, y: 0.3084, z: -0.0206}
   m_LocalScale: {x: 0.46827802, y: 0.46827808, z: 0.46827802}
   m_Children: []
   m_Father: {fileID: 5384555589624604777}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0.777, y: 1.273, z: -2.777}
+  m_LocalEulerAnglesHint: {x: 6.121, y: -23.155, z: -243.034}
 --- !u!108 &6331822445839344899
 Light:
   m_ObjectHideFlags: 0
@@ -10036,10 +10036,10 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.9150943, g: 0.8374867, b: 0.617257, a: 1}
-  m_Intensity: 1.05
-  m_Range: 2.9
-  m_SpotAngle: 30
-  m_InnerSpotAngle: 21.80208
+  m_Intensity: 1
+  m_Range: 0.25
+  m_SpotAngle: 91.1074
+  m_InnerSpotAngle: 70.84828
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
@@ -10048,7 +10048,7 @@ Light:
     m_Strength: 1
     m_Bias: 0.05
     m_NormalBias: 0.4
-    m_NearPlane: 0.2
+    m_NearPlane: 0.12659658
     m_CullingMatrixOverride:
       e00: 1
       e01: 0
@@ -10081,7 +10081,7 @@ Light:
   m_BounceIntensity: 0
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: Infinity, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -10254,7 +10254,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 230
+      scalar: 155
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -10951,7 +10951,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 45
+      scalar: 25
       minScalar: 10
       maxCurve:
         serializedVersion: 2

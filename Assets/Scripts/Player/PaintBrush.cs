@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static GameConstants;
 
 /**
  * Controls the lighting system for the Player Paint brush.
@@ -22,12 +23,17 @@ public class PaintBrush : MonoBehaviour
         lightSettings = GetComponentsInChildren<Light>()[0];
         particleSystemCore = GetComponentInChildren<ParticleSystem>();
         particleSettings = particleSystemCore.main;
+
+        // Allow material emissions to be controlled
+        brushTip.EnableKeyword("_EMISSION");
     }
 
     private void SwitchColor(Color32 color)
     {
         currentColor = color;
-        brushTip.SetColor("_Color", color);
+        // brushTip.SetColor("_Color", color);
+        brushTip.color = color;
+        brushTip.SetColor("_EmissionColor", colorsToEmissions[color]);
         
         particleSettings.startColor = (Color) color;
         lightSettings.color = color;

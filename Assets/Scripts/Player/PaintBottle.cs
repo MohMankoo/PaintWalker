@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static GameConstants;
 
 public class PaintBottle : MonoBehaviour
 {
@@ -20,12 +21,17 @@ public class PaintBottle : MonoBehaviour
         coreParticleSettings = coreParticleSystem.main;
         switchParticleSystem = GetComponentsInChildren<ParticleSystem>()[1];
         switchParticleSettings = switchParticleSystem.main;
+
+        // Enable emission control
+        bottlePaint.EnableKeyword("_EMISSION");
     }
 
     private void SwitchColor(Color32 color, bool playEffects)
     {
         currentColor = color;
-        bottlePaint.SetColor("_Color", color);
+        // bottlePaint.SetColor("_Color", color);
+        bottlePaint.color = color;
+        bottlePaint.SetColor("_EmissionColor", colorsToEmissions[color]);
 
         coreParticleSettings.startColor = (Color) color;
         switchParticleSettings.startColor = (Color) color;

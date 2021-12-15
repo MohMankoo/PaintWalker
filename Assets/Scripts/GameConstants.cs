@@ -32,6 +32,27 @@ public class GameConstants : MonoBehaviour
     public static readonly Color32 Blue = new Color32(140, 210, 205, 255);
 
     /*
+     * The Colors of emissions produced by various materials
+     */
+    public static readonly Color32 RedEmission = new Color32(255, 0, 32, 255);
+    public static readonly Color32 GreenEmission = new Color32(114, 255, 45, 255);
+    public static readonly Color32 YellowEmission = new Color32(200, 130, 0, 255);
+    public static readonly Color32 BlueEmission = new Color32(0, 255, 187, 255);
+
+    /*
+     * Dict colorsToEmissions binds Color32 values of paint colors
+     * to their respective emission colors on materials
+     */
+    public static readonly Dictionary<Color32, Color32> colorsToEmissions =
+                       new Dictionary<Color32, Color32>()
+    {
+        [Red] = RedEmission,
+        [Green] = GreenEmission,
+        [Yellow] = YellowEmission,
+        [Blue] = BlueEmission
+    };
+
+    /*
      * World interaction visual feedback constants
      */
     public const float HOVEROVER_R = 1f;

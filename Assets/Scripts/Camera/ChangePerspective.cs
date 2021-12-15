@@ -46,7 +46,7 @@ public class ChangePerspective : MonoBehaviour
 
         Vector3 exitObjectPosition = ExitObject.transform.position;
         Vector3 position = transform.position;
-        _exitPosition = new Vector3(exitObjectPosition.x, position.y, exitObjectPosition.z);
+        _exitPosition = new Vector3(exitObjectPosition.x, position.y, exitObjectPosition.z - 5);
         _originalPosition = position;
 
         _cutsceneManager = FindObjectOfType<CutsceneManager>();
@@ -68,11 +68,11 @@ public class ChangePerspective : MonoBehaviour
 
         transform.position = newPosition;
 
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
         while (Vector3.Distance(transform.position, originalPosition) > 0.1)
         {
             transform.position = Vector3.MoveTowards(
-                transform.position, originalPosition, PanningSpeed * Time.deltaTime
+                transform.position, originalPosition, PanningSpeed * 2 * Time.deltaTime
             );
             yield return null;
         }
@@ -84,15 +84,29 @@ public class ChangePerspective : MonoBehaviour
 
     void Update()
     {
-        if (!_hasPannedToExit
-            && (_cutsceneManager == null // For levels with no cutscene
-                || (_cutsceneManager != null && !_cutsceneManager.isActiveAndEnabled))) // For levels with a cutscene
+        if ((_cutsceneManager == null ||
+             (_cutsceneManager != null && !_cutsceneManager.isActiveAndEnabled)) &&
+            !_hasPannedToExit)
         {
             _restartDontDeleteManager = FindObjectOfType<RestartDontDeleteManager>();
             if (!_restartDontDeleteManager.isRestarting)
             {
                 StartCoroutine(MoveToPositionAndBack(_exitPosition, _originalPosition));
             }
+            _hasPannedToExit = true;
+        }
+
+        // Cancel panning to exit upon user input
+        // TODO: Not working
+        if ((Input.GetMouseButtonDown(0)               ||
+             _controllerUtil.GetConfirmButtonPressed() ||
+             _controllerUtil.GetCancelButtonPressed()))
+        {
+            StopCoroutine("MoveToPositionAndBack");
+            transform.position = _originalPosition;
+            _controllerUtil.CloseMenu();
+
+            _levelManager.freezePlayer = false;
             _hasPannedToExit = true;
         }
 

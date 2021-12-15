@@ -3934,6 +3934,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2056736661375239378, guid: b3a481ab15c92a6439f4a8048d1c52c0, type: 3}
+      propertyPath: m_overflowMode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2056736661766437802, guid: b3a481ab15c92a6439f4a8048d1c52c0, type: 3}
+      propertyPath: m_overflowMode
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2056736661931027728, guid: b3a481ab15c92a6439f4a8048d1c52c0, type: 3}
       propertyPath: m_Name
       value: TutorialPromptsCanvas
@@ -6230,7 +6238,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.9098039, b: 0.65882355, a: 1}
+  m_Color: {r: 1, g: 0.9575472, b: 0.9922884, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
