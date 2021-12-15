@@ -21,7 +21,6 @@ public class Player : MonoBehaviour
     private ControllerUtil _controllerUtil;
     private PaintingSystem _paintingSystem;
 
-
     // For basic movement
     private Rigidbody _rigidbody;
     private CapsuleCollider _capsuleCollider;
@@ -47,9 +46,7 @@ public class Player : MonoBehaviour
 
     private UpdateUI _updateUI;
     public float _pushTimer = 30.0f;
-
     private bool _hasWaitedTurn;
-
 
     private void Awake()
     {
