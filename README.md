@@ -1,5 +1,7 @@
 # Paint Walker
 
+![Paint Walker Screenshot](./Assets/Sprites/MainMenu/MainMenuBGWithLogo.png?raw=true)
+
 ## About
 When a colorful world is suddenly stripped of its colours,
 many of its residents and plantlife await death’s door.
@@ -9,7 +11,7 @@ isometric 3D world. Your only hope of salvation is to make clever
 use of the limited paint you obtain along the way
 to restore life into the world.
 
-## Credits
+## Contributors
 ### December 11, 2021 - Present
 - **Mohpreet Mankoo**
 ### Prior to December 11, 2021
@@ -20,5 +22,6 @@ to restore life into the world.
 - **Stephen Spencer** (3D Art & Animation)
 - **Long Kha (Stark)** (3D Art)
 - **Jisu Kim** (3D Art)
+- **Zachary J.K.** (Model Rigging)
 - **Hayden McGowan** (Music and Audio Implementation)
 - **Briana Lee** (Music)
