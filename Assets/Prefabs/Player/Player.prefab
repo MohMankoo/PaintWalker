@@ -9881,7 +9881,7 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!95 &6772447459882719093
+--- !u!95 &8373180620884964996
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
