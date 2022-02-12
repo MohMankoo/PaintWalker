@@ -10,6 +10,7 @@ public class ChangePerspective : MonoBehaviour
     public LevelManager LevelManager;
     private GameObject _player;
     private ControllerUtil _controllerUtil;
+    private IEnumerator exitShowcaseCoroutine;
 
     public float rotationSpeed;
     private float _target_y_angle;
@@ -43,6 +44,7 @@ public class ChangePerspective : MonoBehaviour
         direction = CameraDirection.N;
         isIntervteredControl = false;
         _changingPersective = false;
+        _hasPannedToExit = false;
 
         Vector3 exitObjectPosition = ExitObject.transform.position;
         Vector3 position = transform.position;
@@ -52,6 +54,7 @@ public class ChangePerspective : MonoBehaviour
         _cutsceneManager = FindObjectOfType<CutsceneManager>();
         _levelManager = FindObjectOfType<LevelManager>();
         _restartDontDeleteManager = FindObjectOfType<RestartDontDeleteManager>();
+        exitShowcaseCoroutine = MoveToPositionAndBack(_exitPosition, _originalPosition);
     }
 
     public IEnumerator MoveToPositionAndBack(Vector3 newPosition, Vector3 originalPosition)
@@ -72,13 +75,14 @@ public class ChangePerspective : MonoBehaviour
         while (Vector3.Distance(transform.position, originalPosition) > 0.1)
         {
             transform.position = Vector3.MoveTowards(
-                transform.position, originalPosition, PanningSpeed * 2 * Time.deltaTime
+                transform.position, originalPosition, PanningSpeed * Time.deltaTime
             );
             yield return null;
         }
 
         transform.position = originalPosition;
         _levelManager.freezePlayer = false;
+        _hasPannedToExit = true;  // Indicate transition to exit complete
         _controllerUtil.CloseMenu();
     }
 
@@ -91,23 +95,21 @@ public class ChangePerspective : MonoBehaviour
             _restartDontDeleteManager = FindObjectOfType<RestartDontDeleteManager>();
             if (!_restartDontDeleteManager.isRestarting)
             {
-                StartCoroutine(MoveToPositionAndBack(_exitPosition, _originalPosition));
+                StartCoroutine(exitShowcaseCoroutine);
             }
-            _hasPannedToExit = true;
         }
 
         // Cancel panning to exit upon user input
-        // TODO: Not working
-        if ((Input.GetMouseButtonDown(0)               ||
-             _controllerUtil.GetConfirmButtonPressed() ||
+        if (!_hasPannedToExit && (Input.GetMouseButtonDown(0) ||
+             _controllerUtil.GetConfirmButtonPressed()        ||
              _controllerUtil.GetCancelButtonPressed()))
         {
-            StopCoroutine("MoveToPositionAndBack");
+            StopCoroutine(exitShowcaseCoroutine);
             transform.position = _originalPosition;
             _controllerUtil.CloseMenu();
 
             _levelManager.freezePlayer = false;
-            _hasPannedToExit = true;
+            _hasPannedToExit = true;  // Turn off panning to exit feature
         }
 
         if (!_levelManager.freezePlayer)

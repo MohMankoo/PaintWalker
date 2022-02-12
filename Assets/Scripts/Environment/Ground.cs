@@ -301,7 +301,6 @@ public class Ground : Interactable, Paintable
         GameObject movableObjectOnTop = IsMovableObjectOnTop();
         if (!movableObjectOnTop && !reverting)
         {
-            print("no object on top");
             MoveRedo NewState = ScriptableObject.CreateInstance("MoveRedo") as MoveRedo;
             NewState.ObjectInit(gameObject);
             _levelManager.redoCommandHandler.AddCommand(NewState);
@@ -309,7 +308,6 @@ public class Ground : Interactable, Paintable
         }
         else if (movableObjectOnTop && !reverting)
         {
-            print("object on top");
             bool up;
             if (destination.y > transform.position.y)
             {
@@ -368,10 +366,8 @@ public class Ground : Interactable, Paintable
                     _isBlockMoving = false;
                     transform.position = destination;
                     _destinationDrop = transform.position + new Vector3(0, -1, 0);
-                    print(_destinationDrop);
                     destinationNeutral = transform.position;
                     _destinationRaise = transform.position - new Vector3(0, -1, 0);
-                    print(_destinationRaise);
 
                     yield break;
                 }

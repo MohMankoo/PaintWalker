@@ -10392,6 +10392,10 @@ PrefabInstance:
       propertyPath: LevelManager
       value: 
       objectReference: {fileID: 1704174257}
+    - target: {fileID: 3517091834097854873, guid: d43312ba220fe6341b8a0a24af2730bd, type: 3}
+      propertyPath: PanningSpeed
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 3517091834837948254, guid: d43312ba220fe6341b8a0a24af2730bd, type: 3}
       propertyPath: m_Name
       value: WorldPivot
